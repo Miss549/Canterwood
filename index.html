@@ -116,7 +116,23 @@ nav{position:sticky;top:0;z-index:10;background:#fff;padding:12px 20px;height:78
 .horse-names.active{display:flex}
 .horse-names a{color:#776b63;text-decoration:none;padding:9px 12px;font-size:14px;border-radius:8px}
 .horse-names a:hover{background:#edf3e9;color:#a77b5d}
-    
+.disciplines-grid {display: grid;grid-template-columns: repeat(2, 1fr);gap: 20px;max-width: 900px;margin: 30px auto;}
+.discipline-card {background: #fffdf9;border-radius: 20px;padding: 20px;box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);border: 2px solid #d8e3d1;text-align: center;transition: transform 0.25s;}
+.discipline-card:hover {transform: translateY(-4px);}
+.discipline-icon {font-size: 32px;margin-bottom: 10px;}
+.discipline-card h3 {color: #61765e;font-size: 20px;margin-bottom: 8px;}
+.discipline-card p {color: #776b63;font-size: 14px;line-height: 1.5;}@media (max-width: 600px) {
+.disciplines-grid {grid-template-columns: 1fr;
+.rules-section{max-width:900px;margin:60px auto;padding:0 20px}
+.rules-card{background:#fffdf9;border-radius:20px;padding:30px;box-shadow:0 5px 20px rgba(70,50,30,.08);border:2px solid #d8e3d1}
+.rules-card h2{text-align:center;color:#61765e;font-size:28px;margin-bottom:25px}
+.rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.rule-card{background:#edf3e9;padding:20px;border-radius:18px;border:2px solid #b5c8aa;box-shadow:0 4px 12px rgba(0,0,0,.04);transition:transform .25s}
+.rule-card:hover{transform:translateY(-3px)}
+.rule-card h3{color:#a77b5d;font-size:18px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.rule-card p{color:#776b63;font-size:14px;line-height:1.5}@media (max-width:600px){
+.rules-grid{grid-template-columns:1fr}}
+     
   </style>
 </head>
 <body>
@@ -229,6 +245,38 @@ nav{position:sticky;top:0;z-index:10;background:#fff;padding:12px 20px;height:78
 
 </div>
 
+<!-- DISCIPLINES -->
+  <section id="disciplines">
+    <h2>🎯 Nos Disciplines</h2>
+
+    <div class="disciplines-grid">
+
+      <article class="discipline-card">
+        <div class="discipline-icon">🏇</div>
+        <h3>Saut d'Obstacles (CSO)</h3>
+        <p>Apprenez le franchissement d'obstacles, le contrôle du tracé et la gestion du rythme.</p>
+      </article>
+
+      <article class="discipline-card">
+        <div class="discipline-icon">🐎</div>
+        <h3>Dressage</h3>
+        <p>Travail de la précision, de la complicité et de la rigueur des figures de manège.</p>
+      </article>
+
+      <article class="discipline-card">
+        <div class="discipline-icon">🌲</div>
+        <h3>Cross / CCE</h3>
+        <p>Parcours en extérieur avec franchissement d'obstacles naturels en plein air.</p>
+      </article>
+
+      <article class="discipline-card">
+        <div class="discipline-icon">🌾</div>
+        <h3>Équitation d'extérieur</h3>
+        <p>Balades, randonnées et travail du cheval en milieu naturel en toute sécurité.</p>
+      </article>
+
+    </div>
+  </section>
     <!-- QUI MONTE QUI -->
 <div class="riders-table">
 
@@ -474,63 +522,7 @@ nav{position:sticky;top:0;z-index:10;background:#fff;padding:12px 20px;height:78
     </div>
   </section>
 
-  <!-- DISCIPLINES -->
-
-<section id="dressage">
-  <h2>🐎 Dressage</h2>
-  <div class="hero">
-    <p>
-      Le dressage est une discipline basée sur la précision,
-      l'élégance et la complicité entre le cheval et son cavalier. 🌿
-    </p>
-  </div>
-</section>
-
-
-<section id="saut">
-  <h2>🏇 Saut d'obstacles</h2>
-  <div class="hero">
-    <p>
-      Le saut d'obstacles consiste à franchir différents obstacles
-      avec agilité et précision. 🏆
-    </p>
-  </div>
-</section>
-
-
-<section id="cross">
-  <h2>🌲 Cross</h2>
-  <div class="hero">
-    <p>
-      Le cross est une discipline qui se pratique sur un parcours
-      extérieur avec des obstacles naturels. 🌳🐎
-    </p>
-  </div>
-</section>
-
-
-<section id="complet">
-  <h2>🏆 Concours complet</h2>
-  <div class="hero">
-    <p>
-      Le concours complet rassemble trois épreuves :
-      dressage, saut d'obstacles et cross.
-    </p>
-  </div>
-</section>
-
-
-<section id="western">
-  <h2>🤠 Équitation western</h2>
-  <div class="hero">
-    <p>
-      L'équitation western regroupe différentes disciplines
-      inspirées du travail des chevaux de ranch. 🤠🐴
-    </p>
-  </div>
-</section>
-
-  <!-- PLAN DE L'ÉCURIE -->
+<!-- PLAN DE L'ÉCURIE -->
 
 <section id="plan" class="map-section">
 
@@ -642,6 +634,46 @@ nav{position:sticky;top:0;z-index:10;background:#fff;padding:12px 20px;height:78
         </div>
       </article>
 
+    </div>
+  </section>
+  <!-- RÈGLEMENT INTÉRIEUR -->
+  <section id="reglement" class="rules-section">
+    <div class="rules-card">
+      <h2>📋 Règlement Intérieur de l'Écurie</h2>
+      
+      <div class="rules-grid">
+        
+        <div class="rule-item">
+          <h3>🪖 Sécurité & Tenue 🪖</h3>
+          <p>Le port de la bombe (casque homologué) est obligatoire à cheval et vivement conseillé aux écuries. Des chaussures fermées sont exigées.</p>
+        </div>
+
+        <div class="rule-item">
+          <h3>🍎 Friandises & Alimentation 🥕</h3>
+          <p>Ne donnez aucune nourriture ou friandise aux chevaux sans l'accord préalable de l'équipe ou des propriétaires.</p>
+        </div>
+
+        <div class="rule-item">
+          <h3>🧼 Propreté ✨</h3>
+          <p>Merci de ramasser les crottins et de balayer votre aire de pansage après vous être occupé de votre cheval.</p>
+        </div>
+
+        <div class="rule-item">
+          <h3>🐕 Animaux de Compagnie 😺</h3>
+          <p>Les chiens doivent impérativement être tenus en laisse dans l'enceinte du club pour la sécurité de tous.</p>
+        </div>
+
+        <div class="rule-item">
+          <h3>🏃‍♀️‍➡️ Circulation aux Écuries 🏃</h3>
+          <p>Interdiction de courir ou de crier à proximité des montures pour éviter tout risque d'effroi.</p>
+        </div>
+
+        <div class="rule-item">
+          <h3>🔒 Matériel & Sellerie 🔒</h3>
+          <p>Chaque équipement doit être nettoyé et remis à sa place dans la sellerie après chaque utilisation.</p>
+        </div>
+
+      </div>
     </div>
   </section>
 <!-- HORAIRES -->
